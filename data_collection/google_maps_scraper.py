@@ -18,7 +18,6 @@ from datetime import datetime
 import pandas as pd
 import logging
 from langdetect import detect, LangDetectException
-from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # For web scraping
 from selenium import webdriver
@@ -52,7 +51,7 @@ class GoogleMapsReviewsScraper:
         """Set up the Selenium WebDriver for scraping."""
         options = Options()
         if self.headless:
-            options.add_argument('--headless')  # Use standard headless mode for stability
+            options.add_argument('--headless')  # Run in headless mode
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--disable-notifications')
@@ -60,15 +59,15 @@ class GoogleMapsReviewsScraper:
         options.add_argument('--start-maximized')
         options.add_argument('--disable-infobars')
         options.add_argument('--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36')
-        # Disable image loading for speed
-        options.add_experimental_option("prefs", {"profile.managed_default_content_settings.images": 2})
+        
         try:
             self.driver = webdriver.Chrome(options=options)
-            self.driver.implicitly_wait(5)
+            self.driver.implicitly_wait(10)
             logger.info("WebDriver initialized successfully")
         except Exception as e:
             logger.error(f"Error setting up WebDriver: {e}")
             print(f"Error setting up WebDriver: {e}")
+            print("Make sure you have Chrome and ChromeDriver installed.")
             exit(1)
     
     def search_bank_agencies(self, bank_name, city):
@@ -527,24 +526,6 @@ class GoogleMapsReviewsScraper:
             self.driver.quit()
             logger.info("WebDriver closed")
 
-def process_agency(agency, max_reviews, headless):
-    """
-    Process a single agency review extraction in a separate driver instance.
-    Returns a list of reviews.
-    """
-    reviews = []
-    try:
-        scraper = GoogleMapsReviewsScraper(headless=headless)
-        reviews = scraper.get_reviews(agency, max_reviews=max_reviews)
-    except Exception as e:
-        logger.error(f"Error processing agency {agency['name']}: {e}")
-    finally:
-        try:
-            scraper.close()
-        except:
-            pass
-    return reviews
-
 def main():
     parser = argparse.ArgumentParser(description='Google Maps Reviews Scraper for Bank Agencies in Morocco')
     parser.add_argument('--output', type=str, required=True, help='Output file path (JSON or CSV)')
@@ -553,61 +534,75 @@ def main():
                        help='Comma-separated list of Moroccan cities (default: Casablanca,Rabat,Marrakech,Tangier,Fes)')
     parser.add_argument('--headless', action='store_true', help='Run browser in headless mode')
     parser.add_argument('--max_reviews', type=int, default=20, help='Maximum number of reviews to collect per agency')
-    parser.add_argument('--threads', type=int, default=4, help='Parallel threads for agency review extraction')
+    
     args = parser.parse_args()
     
-    # First, use a single scraper to collect all agencies
+    # Initialize the scraper
     scraper = GoogleMapsReviewsScraper(headless=args.headless)
-    all_agencies = []
+    
+    all_reviews = []
     bank_names = [name.strip() for name in args.banks.split(',')]
     cities = [city.strip() for city in args.cities.split(',')]
     
-    for bank_name in bank_names:
-        logger.info(f"Processing bank: {bank_name}")
-        print(f"Processing bank: {bank_name}")
-        for city in cities:
-            logger.info(f"  Searching in city: {city}")
-            print(f"  Searching in city: {city}")
-            agencies = scraper.search_bank_agencies(bank_name, city)
-            logger.info(f"  Found {len(agencies)} agencies in {city}")
-            print(f"  Found {len(agencies)} agencies in {city}")
-            all_agencies.extend(agencies)
-            time.sleep(1)
-    scraper.close()
-    
-    # Now, extract reviews for each agency concurrently.
-    all_reviews = []
-    with ThreadPoolExecutor(max_workers=min(args.threads, len(all_agencies))) as executor:
-        future_to_agency = {executor.submit(process_agency, agency, args.max_reviews, args.headless): agency for agency in all_agencies}
-        for future in as_completed(future_to_agency):
-            agency = future_to_agency[future]
-            try:
-                reviews = future.result()
-                # Skip empty reviews (i.e. without text and rating)
-                valid = [r for r in reviews if r.get("text") or r.get("rating")]
-                all_reviews.extend(valid)
-                logger.info(f"Collected {len(valid)} reviews for {agency['name']}")
-                print(f"Collected {len(valid)} reviews for {agency['name']}")
-            except Exception as e:
-                logger.error(f"Error in agency {agency['name']}: {e}")
-    
-    # Save results
-    output_file = args.output
-    if not all_reviews:
-        logger.warning("No reviews were collected!")
-        print("Warning: No reviews were collected!")
-    else:
+    try:
+        for bank_name in bank_names:
+            logger.info(f"Processing bank: {bank_name}")
+            print(f"Processing bank: {bank_name}")
+            
+            for city in cities:
+                logger.info(f"  Searching in city: {city}")
+                print(f"  Searching in city: {city}")
+                
+                agencies = scraper.search_bank_agencies(bank_name, city)
+                logger.info(f"  Found {len(agencies)} agencies in {city}")
+                print(f"  Found {len(agencies)} agencies in {city}")
+                
+                for i, agency in enumerate(agencies):
+                    logger.info(f"    Processing agency {i+1}/{len(agencies)}: {agency['name']}")
+                    print(f"    Processing agency {i+1}/{len(agencies)}: {agency['name']}")
+                    
+                    reviews = scraper.get_reviews(agency, max_reviews=args.max_reviews)
+                    all_reviews.extend(reviews)
+                    
+                    logger.info(f"    Collected {len(reviews)} reviews for {agency['name']}")
+                    print(f"    Collected {len(reviews)} reviews for {agency['name']}")
+                    
+                    # Sleep to avoid hitting rate limits (random delay between 2-5 seconds)
+                    time.sleep(random.uniform(2, 5))
+                
+                # Sleep between cities
+                time.sleep(1)
+        
+        # Save the results based on file extension
+        output_file = args.output
+        if not all_reviews:
+            logger.warning("No reviews were collected!")
+            print("Warning: No reviews were collected!")
+        
         if output_file.endswith('.json'):
-            with open(output_file, 'w', encoding='utf-8') as f:
-                json.dump(all_reviews, f, ensure_ascii=False, indent=4)
+            scraper.save_to_json(all_reviews, output_file)
         elif output_file.endswith('.csv'):
-            df = pd.DataFrame(all_reviews)
-            df.to_csv(output_file, index=False, encoding='utf-8')
+            scraper.save_to_csv(all_reviews, output_file)
         else:
             logger.error("Unsupported output format. Use .json or .csv")
             print("Error: Unsupported output format. Use .json or .csv")
-        logger.info(f"Saved {len(all_reviews)} reviews to {output_file}")
-        print(f"\nSuccess! Saved {len(all_reviews)} reviews to {output_file}")
+    
+    except KeyboardInterrupt:
+        logger.info("Process interrupted by user")
+        print("\nProcess interrupted by user")
+        
+        # Save collected reviews so far
+        if all_reviews:
+            temp_output = f"partial_reviews_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            scraper.save_to_json(all_reviews, temp_output)
+            print(f"Saved {len(all_reviews)} reviews collected so far to {temp_output}")
+    
+    except Exception as e:
+        logger.error(f"An error occurred: {e}")
+        print(f"An error occurred: {e}")
+    
+    finally:
+        scraper.close()
 
 if __name__ == "__main__":
     main()
