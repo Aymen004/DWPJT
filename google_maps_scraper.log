@@ -1,0 +1,597 @@
+2025-03-11 16:50:53,068 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Casablanca
+2025-03-11 16:50:53,070 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Rabat
+2025-03-11 16:50:53,072 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Marrakech
+2025-03-11 16:50:53,073 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Agadir
+2025-03-11 16:50:53,075 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Tangier
+2025-03-11 16:50:53,077 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Tetouan
+2025-03-11 16:50:53,080 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Fes
+2025-03-11 16:50:53,084 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Meknes
+2025-03-11 16:50:53,091 - OptimizedGoogleMapsScraper - INFO - Searching for CIH Bank agencies in Casablanca
+2025-03-11 16:50:53,093 - OptimizedGoogleMapsScraper - INFO - Searching for CIH Bank agencies in Rabat
+2025-03-11 16:50:53,099 - OptimizedGoogleMapsScraper - INFO - Searching for CIH Bank agencies in Marrakech
+2025-03-11 16:50:53,102 - OptimizedGoogleMapsScraper - INFO - Searching for CIH Bank agencies in Agadir
+2025-03-11 16:51:38,819 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for CIH Bank in Casablanca
+2025-03-11 16:51:39,247 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Tangier
+2025-03-11 16:51:39,306 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Meknes
+2025-03-11 16:51:40,139 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Agadir
+2025-03-11 16:51:40,551 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Ifriquia in Casablanca
+2025-03-11 16:51:40,652 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Marrakech
+2025-03-11 16:51:40,972 - OptimizedGoogleMapsScraper - INFO - Added agency: Agence Attijari Wafabank Souani in Tangier
+2025-03-11 16:51:41,038 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank Mansour in Meknes
+2025-03-11 16:51:41,142 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Tetouan
+2025-03-11 16:51:41,610 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Rabat
+2025-03-11 16:51:41,751 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for CIH Bank in Rabat
+2025-03-11 16:51:41,815 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Agence Agadir Hay Dakhla in Agadir
+2025-03-11 16:51:42,316 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Marrakech
+2025-03-11 16:51:42,791 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Tetouan
+2025-03-11 16:51:42,913 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for CIH Bank in Marrakech
+2025-03-11 16:51:43,287 - OptimizedGoogleMapsScraper - INFO - Added agency: Agence Attijari Wafa Banque in Rabat
+2025-03-11 16:51:43,424 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Banque in Rabat
+2025-03-11 16:51:44,589 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank, Agence Marrakech, Hassan II. in Marrakech
+2025-03-11 16:51:45,115 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Casablanca
+2025-03-11 16:51:45,185 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for CIH Bank in Agadir
+2025-03-11 16:51:46,789 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 16:51:46,863 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank - Agence El Houda in Agadir
+2025-03-11 16:51:52,638 - OptimizedGoogleMapsScraper - WARNING - Timeout waiting for search results for Attijariwafa Bank in Fes
+2025-03-11 16:51:52,638 - OptimizedGoogleMapsScraper - INFO - Searching for CIH Bank agencies in Tangier
+2025-03-11 16:51:58,422 - urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-03-11 16:52:11,937 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Bank - Agence Ifriquia in Casablanca
+2025-03-11 16:52:22,393 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Agence Attijari Wafabank Souani in Tangier
+2025-03-11 16:52:22,576 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank Mansour in Meknes
+2025-03-11 16:52:23,407 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank - Agence Agadir Hay Dakhla in Agadir
+2025-03-11 16:52:23,889 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank in Marrakech
+2025-03-11 16:52:24,262 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa bank in Tetouan
+2025-03-11 16:52:24,779 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Agence Attijari Wafa Banque in Rabat
+2025-03-11 16:52:24,920 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Banque in Rabat
+2025-03-11 16:52:26,444 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Bank, Agence Marrakech, Hassan II. in Marrakech
+2025-03-11 16:52:28,892 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Bank - Agence El Houda in Agadir
+2025-03-11 16:52:40,829 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Ahlan in Casablanca
+2025-03-11 16:52:56,099 - OptimizedGoogleMapsScraper - INFO - Found 0 potential agencies for CIH Bank in Tangier
+2025-03-11 16:52:56,100 - OptimizedGoogleMapsScraper - INFO - Searching for CIH Bank agencies in Tetouan
+2025-03-11 16:53:01,122 - urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-03-11 16:53:11,238 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank in Casablanca
+2025-03-11 16:53:17,742 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for CIH Bank - Agence Ifriquia
+2025-03-11 16:53:19,152 - OptimizedGoogleMapsScraper - INFO - Searching for CIH Bank agencies in Fes
+2025-03-11 16:53:30,935 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Agence Attijari Wafabank Souani
+2025-03-11 16:53:31,606 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank Mansour
+2025-03-11 16:53:32,046 - OptimizedGoogleMapsScraper - INFO - Searching for CIH Bank agencies in Meknes
+2025-03-11 16:53:32,432 - OptimizedGoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Casablanca
+2025-03-11 16:53:33,285 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa bank
+2025-03-11 16:53:33,592 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank - Agence Agadir Hay Dakhla
+2025-03-11 16:53:34,740 - OptimizedGoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Rabat
+2025-03-11 16:53:35,017 - OptimizedGoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Marrakech
+2025-03-11 16:53:36,642 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for CIH Banque
+2025-03-11 16:53:37,738 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for CIH Bank, Agence Marrakech, Hassan II.
+2025-03-11 16:53:37,779 - OptimizedGoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Agadir
+2025-03-11 16:53:38,871 - urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-03-11 16:53:38,930 - OptimizedGoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Tangier
+2025-03-11 16:53:40,270 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for CIH Bank - Agence El Houda
+2025-03-11 16:53:41,005 - OptimizedGoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Tetouan
+2025-03-11 16:53:43,047 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank
+2025-03-11 16:53:43,795 - OptimizedGoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Fes
+2025-03-11 16:53:48,365 - urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-03-11 16:53:54,336 - urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-03-11 16:53:54,336 - OptimizedGoogleMapsScraper - INFO - Found 5 potential agencies for CIH Bank in Tetouan
+2025-03-11 16:53:54,618 - urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-03-11 16:54:00,993 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank in Tetouan
+2025-03-11 16:54:13,792 - OptimizedGoogleMapsScraper - INFO - Found 6 potential agencies for CIH Bank in Fes
+2025-03-11 16:54:14,878 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Banque Poupulaire in Casablanca
+2025-03-11 16:54:15,567 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH BANK in Fes
+2025-03-11 16:54:16,281 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Agence Attijari Wafa Banque
+2025-03-11 16:54:16,323 - urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-03-11 16:54:16,664 - OptimizedGoogleMapsScraper - INFO - Added agency: Banque Populaire in Casablanca
+2025-03-11 16:54:17,270 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for CIH Bank in Meknes
+2025-03-11 16:54:17,751 - OptimizedGoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Meknes
+2025-03-11 16:54:17,797 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Banque Poupulaire in Rabat
+2025-03-11 16:54:17,952 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Banque Poupulaire in Marrakech
+2025-03-11 16:54:18,061 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Tetouan
+2025-03-11 16:54:18,439 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 16:54:19,022 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank in Meknes
+2025-03-11 16:54:19,516 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 16:54:19,566 - OptimizedGoogleMapsScraper - INFO - Added agency: Banque Populaire in Rabat
+2025-03-11 16:54:19,699 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank
+2025-03-11 16:54:19,747 - OptimizedGoogleMapsScraper - INFO - Added agency: Agence Banque Populaire - \u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0634\u0639\u0628\u064a in Marrakech
+2025-03-11 16:54:20,712 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Bank - Agence Ahlan in Casablanca
+2025-03-11 16:54:21,439 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Agence Majorelle in Fes
+2025-03-11 16:54:21,830 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Agence Agadir Hassan II in Meknes
+2025-03-11 16:54:23,019 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Banque Poupulaire in Agadir
+2025-03-11 16:54:23,126 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Rabat
+2025-03-11 16:54:23,127 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa bank - Agence Tanger Mly Rachid in Casablanca
+2025-03-11 16:54:24,179 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Banque Poupulaire in Tangier
+2025-03-11 16:54:24,185 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 16:54:24,746 - OptimizedGoogleMapsScraper - INFO - Added agency: Banque Populaire - Agence Bouabid in Agadir
+2025-03-11 16:54:24,755 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Meknes
+2025-03-11 16:54:25,344 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Banque Poupulaire in Tetouan
+2025-03-11 16:54:25,850 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 16:54:25,869 - OptimizedGoogleMapsScraper - INFO - Added agency: Banque Populaire - Agence Socco Alto in Tangier
+2025-03-11 16:54:26,940 - OptimizedGoogleMapsScraper - INFO - Added agency: Siège Social Attijariwafa Bank in Fes
+2025-03-11 16:54:27,043 - OptimizedGoogleMapsScraper - INFO - Added agency: Banque Populaire Agence Moulay Abdeslam in Tetouan
+2025-03-11 16:54:27,439 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Banque Poupulaire in Fes
+2025-03-11 16:54:27,518 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Centre d'affaires Agadir in Meknes
+2025-03-11 16:54:27,556 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Agadir
+2025-03-11 16:54:27,990 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH BANK in Fes
+2025-03-11 16:54:28,566 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 16:54:28,720 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank in Tangier
+2025-03-11 16:54:29,107 - OptimizedGoogleMapsScraper - INFO - Added agency: Agence Banque Populaire in Fes
+2025-03-11 16:54:29,657 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Banque Populaire in Casablanca
+2025-03-11 16:54:29,767 - OptimizedGoogleMapsScraper - INFO - Added agency: Credit Immobilier Et Hotelier Agence Rabat Akkari (Cih Standard) in Tetouan
+2025-03-11 16:54:30,238 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - El Houda in Meknes
+2025-03-11 16:54:30,415 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Agadir
+2025-03-11 16:54:31,348 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Bank in Meknes
+2025-03-11 16:54:31,411 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Bourgogne in Tangier
+2025-03-11 16:54:31,965 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Gueliz Centrale in Fes
+2025-03-11 16:54:32,555 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Banque in Tetouan
+2025-03-11 16:54:33,169 - OptimizedGoogleMapsScraper - INFO - Added agency: attijariwafa bank in Agadir
+2025-03-11 16:54:34,177 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank, Agence Derb Ghallef, Casablanca in Tangier
+2025-03-11 16:54:35,214 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Banque Populaire - Agence Socco Alto in Tangier
+2025-03-11 16:54:35,323 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH BANK in Tetouan
+2025-03-11 16:54:35,839 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Agadir
+2025-03-11 16:54:36,880 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Banque Populaire - Agence Bouabid in Agadir
+2025-03-11 16:54:38,037 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank in Tetouan
+2025-03-11 16:54:39,145 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Banque Populaire Agence Moulay Abdeslam in Tetouan
+2025-03-11 16:54:49,614 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Bank in Tetouan
+2025-03-11 16:54:54,749 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Banque Populaire in Rabat
+2025-03-11 16:54:59,670 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Banque Poupulaire in Meknes
+2025-03-11 16:55:01,526 - OptimizedGoogleMapsScraper - INFO - Added agency: Banque Populaire in Meknes
+2025-03-11 16:55:01,585 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Agence Banque Populaire - \u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0634\u0639\u0628\u064a in Marrakech
+2025-03-11 16:55:03,498 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Agence Banque Populaire in Fes
+2025-03-11 16:55:04,370 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank - Agence El Houda in Meknes
+2025-03-11 16:55:26,242 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for CIH Bank - Agence Ahlan
+2025-03-11 16:55:27,666 - OptimizedGoogleMapsScraper - INFO - Searching for BMCE Bank of Africa agencies in Casablanca
+2025-03-11 16:55:32,194 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for CIH BANK
+2025-03-11 16:55:33,382 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank in Fes
+2025-03-11 16:55:35,841 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Banque Populaire in Meknes
+2025-03-11 16:55:36,680 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for CIH Bank
+2025-03-11 16:55:37,395 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Banque Populaire
+2025-03-11 16:55:37,426 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank - Agence Agadir Hassan II in Meknes
+2025-03-11 16:55:38,287 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank in Casablanca
+2025-03-11 16:55:40,657 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Banque Populaire - Agence Socco Alto
+2025-03-11 16:55:41,387 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Bank in Tangier
+2025-03-11 16:55:43,998 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Banque Populaire - Agence Bouabid
+2025-03-11 16:55:45,155 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank in Agadir
+2025-03-11 16:55:45,380 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Banque Populaire Agence Moulay Abdeslam
+2025-03-11 16:55:45,898 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Credit Immobilier Et Hotelier Agence Rabat Akkari (Cih Standard) in Tetouan
+2025-03-11 16:55:56,174 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for CIH Bank
+2025-03-11 16:55:57,001 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank in Tetouan
+2025-03-11 16:56:03,533 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Banque Populaire
+2025-03-11 16:56:04,398 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa bank in Rabat
+2025-03-11 16:56:09,450 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for BMCE Bank of Africa in Casablanca
+2025-03-11 16:56:11,275 - OptimizedGoogleMapsScraper - INFO - Added agency: Bank of Africa Siège Social in Casablanca
+2025-03-11 16:56:11,449 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Agence Banque Populaire - \u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0634\u0639\u0628\u064a
+2025-03-11 16:56:12,919 - OptimizedGoogleMapsScraper - INFO - Searching for BMCE Bank of Africa agencies in Rabat
+2025-03-11 16:56:14,086 - OptimizedGoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Dradeb in Casablanca
+2025-03-11 16:56:14,364 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Agence Banque Populaire
+2025-03-11 16:56:15,837 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Bank - Agence Gueliz Centrale in Fes
+2025-03-11 16:56:16,866 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 16:56:20,033 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 16:56:22,898 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Casablanca
+2025-03-11 16:56:23,940 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Bank of Africa Siège Social in Casablanca
+2025-03-11 16:56:42,276 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank
+2025-03-11 16:56:43,378 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank - Agence Majorelle in Fes
+2025-03-11 16:56:44,317 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank
+2025-03-11 16:56:44,927 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa bank - Agence Tanger Mly Rachid in Casablanca
+2025-03-11 16:56:45,933 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Banque Populaire
+2025-03-11 16:56:45,976 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank - Agence Agadir Hassan II
+2025-03-11 16:56:46,457 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Bank - Agence El Houda in Meknes
+2025-03-11 16:56:47,210 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank in Meknes
+2025-03-11 16:56:48,549 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for CIH Bank
+2025-03-11 16:56:49,627 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Bank - Agence Bourgogne in Tangier
+2025-03-11 16:56:51,991 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank
+2025-03-11 16:56:53,097 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Credit Immobilier Et Hotelier Agence Rabat Akkari (Cih Standard)
+2025-03-11 16:56:53,134 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa bank in Agadir
+2025-03-11 16:56:54,086 - OptimizedGoogleMapsScraper - INFO - Getting reviews for CIH Banque in Tetouan
+2025-03-11 16:57:03,361 - OptimizedGoogleMapsScraper - ERROR - Error getting reviews for Attijariwafa bank: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))
+2025-03-11 16:57:03,362 - OptimizedGoogleMapsScraper - ERROR - Error getting reviews for CIH Bank - Agence Gueliz Centrale: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))
+2025-03-11 16:57:04,549 - OptimizedGoogleMapsScraper - INFO - Searching for BMCE Bank of Africa agencies in Marrakech
+2025-03-11 16:57:04,696 - OptimizedGoogleMapsScraper - INFO - Searching for BMCE Bank of Africa agencies in Agadir
+2025-03-11 16:57:07,319 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B0740>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/bd0a09213d0bc97fdceb4abd24e69643/element
+2025-03-11 16:57:07,320 - urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-03-11 16:57:07,321 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B26F0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/bd0a09213d0bc97fdceb4abd24e69643/elements
+2025-03-11 16:57:07,321 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B1580>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/ab8cc02cb1e7d8b68af6cc57665a2f10/elements
+2025-03-11 16:57:07,321 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B0AD0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/a5bdb9e1a18577336bc24697af017670/elements
+2025-03-11 16:57:07,366 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B25A0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/8dcae7814d41a8ee3d212e84c48f9267/elements
+2025-03-11 16:57:07,413 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B0F80>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f37d0ecfdf2acc68fea2dcdaf75b2e45/elements
+2025-03-11 16:57:07,414 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002453092EC00>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f80bc98ffc91158a81ceb277ede31a48/elements
+2025-03-11 16:57:07,414 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B2A80>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/25563d2721c1285ece816285f6dafb70/elements
+2025-03-11 16:57:07,430 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002453096E930>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/74cc0b113311f0c2aabb49dd71ed6dcf/elements
+2025-03-11 16:57:07,431 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002453098CF50>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/6a3497b631e1959ea0902ceb601d73e7/elements
+2025-03-11 16:57:08,613 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002453098E4E0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/ab8cc02cb1e7d8b68af6cc57665a2f10/url
+2025-03-11 16:57:08,757 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002453098E090>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f37d0ecfdf2acc68fea2dcdaf75b2e45/url
+2025-03-11 16:57:11,377 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B14F0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/bd0a09213d0bc97fdceb4abd24e69643/element
+2025-03-11 16:57:11,378 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B0680>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/ab8cc02cb1e7d8b68af6cc57665a2f10/elements
+2025-03-11 16:57:11,378 - urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-03-11 16:57:11,379 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B1760>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/bd0a09213d0bc97fdceb4abd24e69643/elements
+2025-03-11 16:57:11,392 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B1FD0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/a5bdb9e1a18577336bc24697af017670/elements
+2025-03-11 16:57:11,423 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B2CC0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/8dcae7814d41a8ee3d212e84c48f9267/elements
+2025-03-11 16:57:11,471 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002453092FCB0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/25563d2721c1285ece816285f6dafb70/elements
+2025-03-11 16:57:11,471 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002453096FC20>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/74cc0b113311f0c2aabb49dd71ed6dcf/elements
+2025-03-11 16:57:11,472 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002453098C1A0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/6a3497b631e1959ea0902ceb601d73e7/elements
+2025-03-11 16:57:11,487 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B2F60>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f80bc98ffc91158a81ceb277ede31a48/elements
+2025-03-11 16:57:11,487 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B2BD0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f37d0ecfdf2acc68fea2dcdaf75b2e45/elements
+2025-03-11 16:57:12,665 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B18E0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/ab8cc02cb1e7d8b68af6cc57665a2f10/url
+2025-03-11 16:57:12,809 - urllib3.connectionpool - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B0BF0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f37d0ecfdf2acc68fea2dcdaf75b2e45/url
+2025-03-11 16:57:15,433 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B31A0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/ab8cc02cb1e7d8b68af6cc57665a2f10/elements
+2025-03-11 16:57:15,449 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B3350>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/bd0a09213d0bc97fdceb4abd24e69643/elements
+2025-03-11 16:57:15,450 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B2090>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/bd0a09213d0bc97fdceb4abd24e69643/element
+2025-03-11 16:57:15,450 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B3560>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/a5bdb9e1a18577336bc24697af017670/elements
+2025-03-11 16:57:15,497 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B37A0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/8dcae7814d41a8ee3d212e84c48f9267/elements
+2025-03-11 16:57:15,530 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B3CB0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/74cc0b113311f0c2aabb49dd71ed6dcf/elements
+2025-03-11 16:57:15,530 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B3A70>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/25563d2721c1285ece816285f6dafb70/elements
+2025-03-11 16:57:15,530 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000245309B3E90>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/6a3497b631e1959ea0902ceb601d73e7/elements
+2025-03-11 16:57:15,560 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024530A04350>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f37d0ecfdf2acc68fea2dcdaf75b2e45/elements
+2025-03-11 16:57:15,576 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024530A04170>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f80bc98ffc91158a81ceb277ede31a48/elements
+2025-03-11 16:57:16,714 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024530A04560>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/ab8cc02cb1e7d8b68af6cc57665a2f10/url
+2025-03-11 16:57:16,856 - urllib3.connectionpool - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024530A047A0>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/f37d0ecfdf2acc68fea2dcdaf75b2e45/url
+2025-03-11 16:57:19,512 - OptimizedGoogleMapsScraper - ERROR - Error searching for BMCE Bank of Africa agencies in Rabat: HTTPConnectionPool(host='localhost', port=54133): Max retries exceeded with url: /session/bd0a09213d0bc97fdceb4abd24e69643/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024530A04E60>: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée'))
+2025-03-11 16:57:19,513 - OptimizedGoogleMapsScraper - INFO - Searching for BMCE Bank of Africa agencies in Tangier
+2025-03-11 16:58:26,836 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Casablanca
+2025-03-11 16:58:26,837 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Rabat
+2025-03-11 16:58:26,839 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Marrakech
+2025-03-11 16:58:26,841 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Agadir
+2025-03-11 16:59:08,215 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Marrakech
+2025-03-11 16:59:09,820 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Marrakech
+2025-03-11 16:59:09,930 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Agadir
+2025-03-11 16:59:10,001 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Casablanca
+2025-03-11 16:59:10,187 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Rabat
+2025-03-11 16:59:11,585 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Agence Agadir Hay Dakhla in Agadir
+2025-03-11 16:59:11,636 - OptimizedGoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 16:59:11,785 - OptimizedGoogleMapsScraper - INFO - Added agency: Agence Attijari Wafa Banque in Rabat
+2025-03-11 16:59:51,166 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank in Marrakech
+2025-03-11 16:59:52,897 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank in Casablanca
+2025-03-11 16:59:52,921 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Attijariwafa Bank - Agence Agadir Hay Dakhla in Agadir
+2025-03-11 16:59:53,196 - OptimizedGoogleMapsScraper - INFO - Getting reviews for Agence Attijari Wafa Banque in Rabat
+2025-03-11 17:00:54,878 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank
+2025-03-11 17:00:55,881 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Tangier
+2025-03-11 17:00:57,243 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank - Agence Agadir Hay Dakhla
+2025-03-11 17:00:57,381 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Agence Attijari Wafa Banque
+2025-03-11 17:00:58,276 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Tetouan
+2025-03-11 17:00:58,598 - OptimizedGoogleMapsScraper - INFO - Collected 0 reviews for Attijariwafa Bank
+2025-03-11 17:00:58,790 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Fes
+2025-03-11 17:00:59,355 - OptimizedGoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Meknes
+2025-03-11 17:01:03,748 - urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: localhost. Connection pool size: 1
+2025-03-11 17:01:38,628 - OptimizedGoogleMapsScraper - INFO - Found 8 potential agencies for Attijariwafa Bank in Tetouan
+2025-03-11 17:01:38,678 - urllib3.connectionpool - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None)': /session/372ad2a20a2e0447fec03bc0c71ec7e6/element/f.66DAB20DF3462AC9DC098F96334F0820.d.DF93F909C2EFD12A10F295B2A9CE95A0.e.28/text
+2025-03-11 17:07:36,140 - GoogleMapsScraper - INFO - WebDriver initialized successfully
+2025-03-11 17:07:36,140 - GoogleMapsScraper - INFO - Processing bank: Attijariwafa Bank
+2025-03-11 17:07:36,145 - GoogleMapsScraper - INFO -   Searching in city: Casablanca
+2025-03-11 17:07:36,146 - GoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Casablanca, Morocco
+2025-03-11 17:07:50,134 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:07:50,164 - GoogleMapsScraper - INFO - Found 9 agencies for Attijariwafa Bank in Casablanca
+2025-03-11 17:07:52,855 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 17:07:57,700 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 17:08:02,089 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 17:08:06,487 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Casablanca
+2025-03-11 17:08:10,966 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank Belvédère in Casablanca
+2025-03-11 17:08:15,465 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Casablanca
+2025-03-11 17:08:20,017 - GoogleMapsScraper - INFO - Added agency: AttijariWafa Banque in Casablanca
+2025-03-11 17:08:24,489 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank Casa Horizon in Casablanca
+2025-03-11 17:08:28,941 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Casablanca
+2025-03-11 17:08:30,955 - GoogleMapsScraper - INFO -   Found 9 agencies in Casablanca
+2025-03-11 17:08:31,959 - GoogleMapsScraper - INFO -   Searching in city: Rabat
+2025-03-11 17:08:31,965 - GoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Rabat, Morocco
+2025-03-11 17:08:43,290 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:08:43,301 - GoogleMapsScraper - INFO - Found 9 agencies for Attijariwafa Bank in Rabat
+2025-03-11 17:08:45,866 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Rabat
+2025-03-11 17:08:50,640 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Rabat
+2025-03-11 17:08:55,074 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Rabat
+2025-03-11 17:08:59,481 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Rabat
+2025-03-11 17:09:03,898 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Rabat
+2025-03-11 17:09:08,350 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Rabat
+2025-03-11 17:09:12,766 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Rabat
+2025-03-11 17:09:17,211 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Rabat
+2025-03-11 17:09:21,787 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Rabat
+2025-03-11 17:09:23,808 - GoogleMapsScraper - INFO -   Found 9 agencies in Rabat
+2025-03-11 17:09:24,810 - GoogleMapsScraper - INFO -   Searching in city: Marrakech
+2025-03-11 17:09:24,812 - GoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Marrakech, Morocco
+2025-03-11 17:09:35,418 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:09:35,439 - GoogleMapsScraper - INFO - Found 9 agencies for Attijariwafa Bank in Marrakech
+2025-03-11 17:09:37,971 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Marrakech
+2025-03-11 17:09:42,505 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Marrakech
+2025-03-11 17:09:47,028 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Marrakech
+2025-03-11 17:09:51,881 - GoogleMapsScraper - INFO - Added agency: Siège Social Attijariwafa Bank in Marrakech
+2025-03-11 17:09:56,563 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Marrakech
+2025-03-11 17:10:01,110 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Marrakech
+2025-03-11 17:10:05,574 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Marrakech
+2025-03-11 17:10:10,055 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Marrakech
+2025-03-11 17:10:14,511 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank - \u0627\u0644\u062a\u062c\u0627\u0631\u064a \u0648\u0641\u0627\u0628\u0646\u0643 in Marrakech
+2025-03-11 17:10:16,537 - GoogleMapsScraper - INFO -   Found 9 agencies in Marrakech
+2025-03-11 17:10:17,539 - GoogleMapsScraper - INFO -   Searching in city: Agadir
+2025-03-11 17:10:17,541 - GoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Agadir, Morocco
+2025-03-11 17:10:28,987 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:10:28,998 - GoogleMapsScraper - INFO - Found 9 agencies for Attijariwafa Bank in Agadir
+2025-03-11 17:10:31,527 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - El Houda in Agadir
+2025-03-11 17:10:36,162 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Agence Agadir Cadi Ayad in Agadir
+2025-03-11 17:10:40,605 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Agadir
+2025-03-11 17:10:45,210 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Agadir
+2025-03-11 17:10:54,694 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Centre d'affaires Agadir in Agadir
+2025-03-11 17:10:59,175 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Agence Agadir Hay Dakhla in Agadir
+2025-03-11 17:11:03,647 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Agadir
+2025-03-11 17:11:08,133 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Agence Agadir Hassan II in Agadir
+2025-03-11 17:11:12,601 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Agadir
+2025-03-11 17:11:14,626 - GoogleMapsScraper - INFO -   Found 9 agencies in Agadir
+2025-03-11 17:11:15,629 - GoogleMapsScraper - INFO -   Searching in city: Tangier
+2025-03-11 17:11:15,631 - GoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Tangier, Morocco
+2025-03-11 17:11:27,174 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:11:27,191 - GoogleMapsScraper - INFO - Found 9 agencies for Attijariwafa Bank in Tangier
+2025-03-11 17:11:29,731 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Tangier
+2025-03-11 17:11:39,285 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Agence Tanger City Center in Tangier
+2025-03-11 17:11:43,877 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Tangier
+2025-03-11 17:11:48,351 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Tangier
+2025-03-11 17:11:57,907 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank - Agence Tanger Mly Rachid in Tangier
+2025-03-11 17:12:02,501 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Tangier
+2025-03-11 17:12:07,006 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Tangier
+2025-03-11 17:12:11,582 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank - Agence Sahate Al Madina in Tangier
+2025-03-11 17:12:16,169 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Tangier
+2025-03-11 17:12:18,201 - GoogleMapsScraper - INFO -   Found 9 agencies in Tangier
+2025-03-11 17:12:19,203 - GoogleMapsScraper - INFO -   Searching in city: Tetouan
+2025-03-11 17:12:19,205 - GoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Tetouan, Morocco
+2025-03-11 17:12:30,436 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:12:30,447 - GoogleMapsScraper - INFO - Found 8 agencies for Attijariwafa Bank in Tetouan
+2025-03-11 17:12:33,014 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Tetouan
+2025-03-11 17:12:37,668 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Tetouan
+2025-03-11 17:12:42,110 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Tetouan
+2025-03-11 17:12:46,636 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Tetouan
+2025-03-11 17:12:51,263 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Tetouan
+2025-03-11 17:12:55,811 - GoogleMapsScraper - INFO - Added agency: ATTIJARIWAFA BANK centre d'affaires \u0627\u0644\u062a\u062c\u0627\u0631\u064a \u0648\u0641\u0627\u0628\u0646\u0643 \u0645\u0631\u0643\u0632 \u0627\u0644\u0623\u0639\u0645\u0627\u0644 in Tetouan
+2025-03-11 17:13:00,636 - GoogleMapsScraper - INFO - Added agency: AttijariWafa bank in Tetouan
+2025-03-11 17:13:05,342 - GoogleMapsScraper - INFO - Added agency: Attijari Wafa Banque in Tetouan
+2025-03-11 17:13:07,355 - GoogleMapsScraper - INFO -   Found 8 agencies in Tetouan
+2025-03-11 17:13:08,357 - GoogleMapsScraper - INFO -   Searching in city: Fes
+2025-03-11 17:13:08,358 - GoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Fes, Morocco
+2025-03-11 17:13:18,935 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:13:18,946 - GoogleMapsScraper - INFO - Found 9 agencies for Attijariwafa Bank in Fes
+2025-03-11 17:13:21,467 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 17:13:26,189 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 17:13:30,895 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 17:13:35,612 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 17:13:40,105 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 17:13:44,647 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 17:13:49,138 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 17:13:53,616 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 17:13:58,128 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Fes
+2025-03-11 17:14:00,145 - GoogleMapsScraper - INFO -   Found 9 agencies in Fes
+2025-03-11 17:14:01,147 - GoogleMapsScraper - INFO -   Searching in city: Meknes
+2025-03-11 17:14:01,161 - GoogleMapsScraper - INFO - Searching for Attijariwafa Bank agencies in Meknes, Morocco
+2025-03-11 17:14:11,623 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:14:11,639 - GoogleMapsScraper - INFO - Found 9 agencies for Attijariwafa Bank in Meknes
+2025-03-11 17:14:14,119 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Meknes
+2025-03-11 17:14:18,764 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Meknes
+2025-03-11 17:14:23,371 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Meknes
+2025-03-11 17:14:27,927 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Meknes
+2025-03-11 17:14:32,503 - GoogleMapsScraper - INFO - Added agency: AttijariWafa Bank Hamria in Meknes
+2025-03-11 17:14:37,147 - GoogleMapsScraper - INFO - Added agency: CTR Meknes Attijariwafa Bank in Meknes
+2025-03-11 17:14:41,875 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank Mansour in Meknes
+2025-03-11 17:14:46,400 - GoogleMapsScraper - INFO - Added agency: Attijariwafa Bank in Meknes
+2025-03-11 17:14:50,940 - GoogleMapsScraper - INFO - Added agency: Attijariwafa bank in Meknes
+2025-03-11 17:14:52,979 - GoogleMapsScraper - INFO -   Found 9 agencies in Meknes
+2025-03-11 17:14:53,982 - GoogleMapsScraper - INFO - Processing bank: CIH Bank
+2025-03-11 17:14:53,984 - GoogleMapsScraper - INFO -   Searching in city: Casablanca
+2025-03-11 17:14:53,986 - GoogleMapsScraper - INFO - Searching for CIH Bank agencies in Casablanca, Morocco
+2025-03-11 17:15:04,612 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:15:04,627 - GoogleMapsScraper - INFO - Found 9 agencies for CIH Bank in Casablanca
+2025-03-11 17:15:07,147 - GoogleMapsScraper - INFO - Added agency: CIH BANK in Casablanca
+2025-03-11 17:15:12,045 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Casablanca
+2025-03-11 17:15:16,578 - GoogleMapsScraper - INFO - Added agency: CIH BANK in Casablanca
+2025-03-11 17:15:21,107 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Ifriquia in Casablanca
+2025-03-11 17:15:25,691 - GoogleMapsScraper - INFO - Added agency: CIH BANK in Casablanca
+2025-03-11 17:15:30,275 - GoogleMapsScraper - INFO - Added agency: CIH BANK in Casablanca
+2025-03-11 17:15:35,045 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Casablanca
+2025-03-11 17:15:39,762 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Casablanca
+2025-03-11 17:15:41,791 - GoogleMapsScraper - INFO -   Found 8 agencies in Casablanca
+2025-03-11 17:15:42,793 - GoogleMapsScraper - INFO -   Searching in city: Rabat
+2025-03-11 17:15:42,794 - GoogleMapsScraper - INFO - Searching for CIH Bank agencies in Rabat, Morocco
+2025-03-11 17:15:53,871 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:15:53,881 - GoogleMapsScraper - INFO - Found 9 agencies for CIH Bank in Rabat
+2025-03-11 17:15:56,375 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Rabat
+2025-03-11 17:16:01,075 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Rabat
+2025-03-11 17:16:05,769 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Rabat
+2025-03-11 17:16:10,240 - GoogleMapsScraper - INFO - Added agency: CIH Banque in Rabat
+2025-03-11 17:16:14,819 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Rabat
+2025-03-11 17:16:19,500 - GoogleMapsScraper - INFO - Added agency: Credit Immobilier Et Hotelier Agence Rabat Akkari (Cih Standard) in Rabat
+2025-03-11 17:16:24,450 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Rabat
+2025-03-11 17:16:29,076 - GoogleMapsScraper - INFO - Added agency: CIH BANK in Rabat
+2025-03-11 17:16:31,119 - GoogleMapsScraper - INFO -   Found 8 agencies in Rabat
+2025-03-11 17:16:32,124 - GoogleMapsScraper - INFO -   Searching in city: Marrakech
+2025-03-11 17:16:32,126 - GoogleMapsScraper - INFO - Searching for CIH Bank agencies in Marrakech, Morocco
+2025-03-11 17:16:43,764 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:16:43,777 - GoogleMapsScraper - INFO - Found 9 agencies for CIH Bank in Marrakech
+2025-03-11 17:16:46,505 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Marrakech
+2025-03-11 17:16:51,384 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Marrakech
+2025-03-11 17:16:55,961 - GoogleMapsScraper - INFO - Added agency: CIH Bank, Agence Marrakech, Hassan II. in Marrakech
+2025-03-11 17:17:00,607 - GoogleMapsScraper - INFO - Added agency: CIH banque in Marrakech
+2025-03-11 17:17:05,267 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Bab Agnaou in Marrakech
+2025-03-11 17:17:10,199 - GoogleMapsScraper - INFO - Added agency: CIH BANK in Marrakech
+2025-03-11 17:17:14,788 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Gueliz Centrale in Marrakech
+2025-03-11 17:17:19,386 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Allal Fassi in Marrakech
+2025-03-11 17:17:23,895 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Mly Abdellah in Marrakech
+2025-03-11 17:17:25,920 - GoogleMapsScraper - INFO -   Found 9 agencies in Marrakech
+2025-03-11 17:17:26,924 - GoogleMapsScraper - INFO -   Searching in city: Agadir
+2025-03-11 17:17:26,925 - GoogleMapsScraper - INFO - Searching for CIH Bank agencies in Agadir, Morocco
+2025-03-11 17:17:37,482 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:17:37,498 - GoogleMapsScraper - INFO - Found 9 agencies for CIH Bank in Agadir
+2025-03-11 17:17:39,996 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence El Houda in Agadir
+2025-03-11 17:17:44,502 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Agadir
+2025-03-11 17:17:48,947 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence El Houda in Agadir
+2025-03-11 17:17:53,412 - GoogleMapsScraper - INFO - Added agency: CIH Bank- Agence Dakhla in Agadir
+2025-03-11 17:17:57,835 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Agadir Oufella in Agadir
+2025-03-11 17:18:02,319 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Agadir
+2025-03-11 17:18:06,817 - GoogleMapsScraper - INFO - Added agency: CIH bank in Agadir
+2025-03-11 17:18:11,384 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Hay Salam in Agadir
+2025-03-11 17:18:15,813 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Agadir
+2025-03-11 17:18:17,854 - GoogleMapsScraper - INFO -   Found 9 agencies in Agadir
+2025-03-11 17:18:18,856 - GoogleMapsScraper - INFO -   Searching in city: Tangier
+2025-03-11 17:18:18,857 - GoogleMapsScraper - INFO - Searching for CIH Bank agencies in Tangier, Morocco
+2025-03-11 17:18:35,649 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:18:35,663 - GoogleMapsScraper - INFO - Found 9 agencies for CIH Bank in Tangier
+2025-03-11 17:18:38,247 - GoogleMapsScraper - INFO - Added agency: CIH - Agence Tanger Principale in Tangier
+2025-03-11 17:18:42,930 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Tangier
+2025-03-11 17:18:47,412 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Tanger Hay Hassani in Tangier
+2025-03-11 17:18:52,128 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Tangier
+2025-03-11 17:18:56,698 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Tangier
+2025-03-11 17:19:01,187 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Tangier
+2025-03-11 17:19:05,936 - GoogleMapsScraper - INFO - Added agency: CIH Bank - Agence Dradeb in Tangier
+2025-03-11 17:19:10,449 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Tangier
+2025-03-11 17:19:14,992 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Tangier
+2025-03-11 17:19:17,019 - GoogleMapsScraper - INFO -   Found 9 agencies in Tangier
+2025-03-11 17:19:18,021 - GoogleMapsScraper - INFO -   Searching in city: Tetouan
+2025-03-11 17:19:18,022 - GoogleMapsScraper - INFO - Searching for CIH Bank agencies in Tetouan, Morocco
+2025-03-11 17:19:29,095 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:19:29,114 - GoogleMapsScraper - INFO - Found 4 agencies for CIH Bank in Tetouan
+2025-03-11 17:19:31,702 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Tetouan
+2025-03-11 17:19:36,283 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Tetouan
+2025-03-11 17:19:40,766 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Tetouan
+2025-03-11 17:19:45,233 - GoogleMapsScraper - INFO - Added agency: CIH BANK in Tetouan
+2025-03-11 17:19:47,262 - GoogleMapsScraper - INFO -   Found 4 agencies in Tetouan
+2025-03-11 17:19:48,263 - GoogleMapsScraper - INFO -   Searching in city: Fes
+2025-03-11 17:19:48,265 - GoogleMapsScraper - INFO - Searching for CIH Bank agencies in Fes, Morocco
+2025-03-11 17:19:59,483 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:19:59,509 - GoogleMapsScraper - INFO - Found 9 agencies for CIH Bank in Fes
+2025-03-11 17:20:02,301 - GoogleMapsScraper - INFO - Added agency: CIH BANK in Fes
+2025-03-11 17:20:07,043 - GoogleMapsScraper - INFO - Added agency: Banque CIH in Fes
+2025-03-11 17:20:11,664 - GoogleMapsScraper - INFO - Added agency: CIH bank in Fes
+2025-03-11 17:20:16,229 - GoogleMapsScraper - INFO - Added agency: Banque CIH in Fes
+2025-03-11 17:20:20,811 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Fes
+2025-03-11 17:20:25,446 - GoogleMapsScraper - INFO - Added agency: Banque CIH Agence Adarissa in Fes
+2025-03-11 17:20:30,031 - GoogleMapsScraper - INFO - Added agency: Banque CIH in Fes
+2025-03-11 17:20:32,101 - GoogleMapsScraper - ERROR - Error processing agency at index 7: list index out of range
+2025-03-11 17:20:32,123 - GoogleMapsScraper - ERROR - Error processing agency at index 8: list index out of range
+2025-03-11 17:20:32,123 - GoogleMapsScraper - INFO -   Found 7 agencies in Fes
+2025-03-11 17:20:33,127 - GoogleMapsScraper - INFO -   Searching in city: Meknes
+2025-03-11 17:20:33,137 - GoogleMapsScraper - INFO - Searching for CIH Bank agencies in Meknes, Morocco
+2025-03-11 17:20:44,188 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:20:44,201 - GoogleMapsScraper - INFO - Found 9 agencies for CIH Bank in Meknes
+2025-03-11 17:20:46,828 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Meknes
+2025-03-11 17:20:51,664 - GoogleMapsScraper - INFO - Added agency: CIH BANK in Meknes
+2025-03-11 17:20:56,180 - GoogleMapsScraper - INFO - Added agency: CIH BANK in Meknes
+2025-03-11 17:21:00,798 - GoogleMapsScraper - INFO - Added agency: CIH Bank in Meknes
+2025-03-11 17:21:05,450 - GoogleMapsScraper - INFO - Added agency: CIH Bank Hamria in Meknes
+2025-03-11 17:21:10,115 - GoogleMapsScraper - INFO - Added agency: Cih Bank Marjane in Meknes
+2025-03-11 17:21:12,188 - GoogleMapsScraper - INFO -   Found 6 agencies in Meknes
+2025-03-11 17:21:13,191 - GoogleMapsScraper - INFO - Processing bank: Banque Poupulaire
+2025-03-11 17:21:13,193 - GoogleMapsScraper - INFO -   Searching in city: Casablanca
+2025-03-11 17:21:13,193 - GoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Casablanca, Morocco
+2025-03-11 17:21:24,172 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:21:24,187 - GoogleMapsScraper - INFO - Found 9 agencies for Banque Poupulaire in Casablanca
+2025-03-11 17:21:26,633 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Casablanca
+2025-03-11 17:21:31,265 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Casablanca
+2025-03-11 17:21:35,694 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Casablanca
+2025-03-11 17:21:40,248 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Casablanca
+2025-03-11 17:21:44,705 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Casablanca
+2025-03-11 17:21:54,348 - GoogleMapsScraper - INFO - Added agency: Banque populaire in Casablanca
+2025-03-11 17:21:58,862 - GoogleMapsScraper - INFO - Added agency: Banque Populaire El Khatabi in Casablanca
+2025-03-11 17:22:03,436 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Casablanca
+2025-03-11 17:22:07,953 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Casablanca
+2025-03-11 17:22:09,982 - GoogleMapsScraper - INFO -   Found 9 agencies in Casablanca
+2025-03-11 17:22:10,984 - GoogleMapsScraper - INFO -   Searching in city: Rabat
+2025-03-11 17:22:10,985 - GoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Rabat, Morocco
+2025-03-11 17:22:21,471 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:22:21,492 - GoogleMapsScraper - INFO - Found 9 agencies for Banque Poupulaire in Rabat
+2025-03-11 17:22:24,080 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Rabat
+2025-03-11 17:22:33,736 - GoogleMapsScraper - INFO - Added agency: Banque populaire in Rabat
+2025-03-11 17:22:38,274 - GoogleMapsScraper - INFO - Added agency: Banque populaire in Rabat
+2025-03-11 17:22:42,733 - GoogleMapsScraper - INFO - Added agency: Banque populaire (Gare Rabat ville) in Rabat
+2025-03-11 17:22:47,432 - GoogleMapsScraper - INFO - Added agency: Banque populaire in Rabat
+2025-03-11 17:22:51,939 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Rabat
+2025-03-11 17:22:56,415 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Rabat
+2025-03-11 17:23:00,894 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Rabat
+2025-03-11 17:23:05,448 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Rabat
+2025-03-11 17:23:07,475 - GoogleMapsScraper - INFO -   Found 9 agencies in Rabat
+2025-03-11 17:23:08,477 - GoogleMapsScraper - INFO -   Searching in city: Marrakech
+2025-03-11 17:23:08,478 - GoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Marrakech, Morocco
+2025-03-11 17:23:18,922 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:23:18,940 - GoogleMapsScraper - INFO - Found 9 agencies for Banque Poupulaire in Marrakech
+2025-03-11 17:23:21,518 - GoogleMapsScraper - INFO - Added agency: Banque Populaire - Agence Mabrouka in Marrakech
+2025-03-11 17:23:26,090 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Marrakech
+2025-03-11 17:23:30,621 - GoogleMapsScraper - INFO - Added agency: Agence Banque Populaire - \u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0634\u0639\u0628\u064a in Marrakech
+2025-03-11 17:23:35,181 - GoogleMapsScraper - INFO - Added agency: Guichet automatique La Bank Populaire in Marrakech
+2025-03-11 17:23:39,759 - GoogleMapsScraper - INFO - Added agency: Bank populaire in Marrakech
+2025-03-11 17:23:44,627 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Marrakech
+2025-03-11 17:23:49,194 - GoogleMapsScraper - INFO - Added agency: Agence Banque Populaire - \u0627\u0644\u0628\u0646\u0643 \u0627\u0644\u0634\u0639\u0628\u064a in Marrakech
+2025-03-11 17:23:53,813 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Marrakech
+2025-03-11 17:23:58,527 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Marrakech
+2025-03-11 17:24:00,549 - GoogleMapsScraper - INFO -   Found 9 agencies in Marrakech
+2025-03-11 17:24:01,552 - GoogleMapsScraper - INFO -   Searching in city: Agadir
+2025-03-11 17:24:01,554 - GoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Agadir, Morocco
+2025-03-11 17:24:11,914 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:24:11,926 - GoogleMapsScraper - INFO - Found 9 agencies for Banque Poupulaire in Agadir
+2025-03-11 17:24:14,461 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Agadir
+2025-03-11 17:24:19,013 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Agadir
+2025-03-11 17:24:23,595 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Agadir
+2025-03-11 17:24:28,089 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Agadir
+2025-03-11 17:24:32,568 - GoogleMapsScraper - INFO - Added agency: Banque Populaire - Agence Bouabid in Agadir
+2025-03-11 17:24:37,065 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Agadir
+2025-03-11 17:24:41,509 - GoogleMapsScraper - INFO - Added agency: Banque Populaire Siège Centre Sud in Agadir
+2025-03-11 17:24:46,011 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Agadir
+2025-03-11 17:24:50,507 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Agadir
+2025-03-11 17:24:52,535 - GoogleMapsScraper - INFO -   Found 9 agencies in Agadir
+2025-03-11 17:24:53,541 - GoogleMapsScraper - INFO -   Searching in city: Tangier
+2025-03-11 17:24:53,545 - GoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Tangier, Morocco
+2025-03-11 17:25:04,014 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:25:04,041 - GoogleMapsScraper - INFO - Found 9 agencies for Banque Poupulaire in Tangier
+2025-03-11 17:25:06,615 - GoogleMapsScraper - INFO - Added agency: Banque Populaire - Agence Al Ousra in Tangier
+2025-03-11 17:25:11,322 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tangier
+2025-03-11 17:25:15,750 - GoogleMapsScraper - INFO - Added agency: Banque Populaire - Agence Riad in Tangier
+2025-03-11 17:25:20,231 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tangier
+2025-03-11 17:25:24,757 - GoogleMapsScraper - INFO - Added agency: Banque Populaire - Agence Al Boughaz in Tangier
+2025-03-11 17:25:29,154 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tangier
+2025-03-11 17:25:33,642 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tangier
+2025-03-11 17:25:38,164 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tangier
+2025-03-11 17:25:47,684 - GoogleMapsScraper - INFO - Added agency: Banque Populaire - Agence City Center in Tangier
+2025-03-11 17:25:49,702 - GoogleMapsScraper - INFO -   Found 9 agencies in Tangier
+2025-03-11 17:25:50,704 - GoogleMapsScraper - INFO -   Searching in city: Tetouan
+2025-03-11 17:25:50,707 - GoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Tetouan, Morocco
+2025-03-11 17:26:01,011 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:26:01,027 - GoogleMapsScraper - INFO - Found 9 agencies for Banque Poupulaire in Tetouan
+2025-03-11 17:26:03,664 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tetouan
+2025-03-11 17:26:08,334 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tetouan
+2025-03-11 17:26:12,777 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tetouan
+2025-03-11 17:26:17,247 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tetouan
+2025-03-11 17:26:21,769 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tetouan
+2025-03-11 17:26:26,377 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tetouan
+2025-03-11 17:26:30,900 - GoogleMapsScraper - INFO - Added agency: Banque Populaire Agence Moulay Abdeslam in Tetouan
+2025-03-11 17:26:35,409 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tetouan
+2025-03-11 17:26:39,865 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Tetouan
+2025-03-11 17:26:41,902 - GoogleMapsScraper - INFO -   Found 9 agencies in Tetouan
+2025-03-11 17:26:42,904 - GoogleMapsScraper - INFO -   Searching in city: Fes
+2025-03-11 17:26:42,906 - GoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Fes, Morocco
+2025-03-11 17:26:54,471 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:26:54,481 - GoogleMapsScraper - INFO - Found 9 agencies for Banque Poupulaire in Fes
+2025-03-11 17:26:56,963 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Fes
+2025-03-11 17:27:01,655 - GoogleMapsScraper - INFO - Added agency: Banque Populaire Agence Bensouda in Fes
+2025-03-11 17:27:06,063 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Fes
+2025-03-11 17:27:10,593 - GoogleMapsScraper - INFO - Added agency: Banque populaire in Fes
+2025-03-11 17:27:15,020 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Fes
+2025-03-11 17:27:19,544 - GoogleMapsScraper - INFO - Added agency: Banque populaire in Fes
+2025-03-11 17:27:23,978 - GoogleMapsScraper - INFO - Added agency: Banque populaire in Fes
+2025-03-11 17:27:28,728 - GoogleMapsScraper - INFO - Added agency: La Banque Populaire in Fes
+2025-03-11 17:27:33,233 - GoogleMapsScraper - INFO - Added agency: Banque populaire in Fes
+2025-03-11 17:27:35,257 - GoogleMapsScraper - INFO -   Found 9 agencies in Fes
+2025-03-11 17:27:36,260 - GoogleMapsScraper - INFO -   Searching in city: Meknes
+2025-03-11 17:27:36,264 - GoogleMapsScraper - INFO - Searching for Banque Poupulaire agencies in Meknes, Morocco
+2025-03-11 17:27:46,773 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:27:46,799 - GoogleMapsScraper - INFO - Found 9 agencies for Banque Poupulaire in Meknes
+2025-03-11 17:27:49,417 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Meknes
+2025-03-11 17:27:54,102 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Meknes
+2025-03-11 17:27:58,667 - GoogleMapsScraper - INFO - Added agency: Bank populaire in Meknes
+2025-03-11 17:28:03,287 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Meknes
+2025-03-11 17:28:08,407 - GoogleMapsScraper - INFO - Added agency: Banque populaire agence meknes camera in Meknes
+2025-03-11 17:28:18,044 - GoogleMapsScraper - INFO - Added agency: Banque populaire in Meknes
+2025-03-11 17:28:22,700 - GoogleMapsScraper - INFO - Added agency: Banque populaire Camera in Meknes
+2025-03-11 17:28:27,340 - GoogleMapsScraper - INFO - Added agency: Banque Populaire Régionale de Meknès in Meknes
+2025-03-11 17:28:31,914 - GoogleMapsScraper - INFO - Added agency: Banque Populaire in Meknes
+2025-03-11 17:28:33,942 - GoogleMapsScraper - INFO -   Found 9 agencies in Meknes
+2025-03-11 17:28:34,948 - GoogleMapsScraper - INFO - Processing bank: BMCE Bank of Africa
+2025-03-11 17:28:34,952 - GoogleMapsScraper - INFO -   Searching in city: Casablanca
+2025-03-11 17:28:34,956 - GoogleMapsScraper - INFO - Searching for BMCE Bank of Africa agencies in Casablanca, Morocco
+2025-03-11 17:28:45,915 - GoogleMapsScraper - INFO - No consent pop-up found or couldn't click it
+2025-03-11 17:28:45,935 - GoogleMapsScraper - INFO - Found 9 agencies for BMCE Bank of Africa in Casablanca
+2025-03-11 17:28:48,574 - GoogleMapsScraper - INFO - Added agency: Bank of Africa Siège Social in Casablanca
+2025-03-11 17:28:53,338 - GoogleMapsScraper - INFO - Added agency: Bank of Africa in Casablanca
+2025-03-11 17:28:57,844 - GoogleMapsScraper - INFO - Added agency: Siège C - BANK OF AFRICA in Casablanca
+2025-03-11 17:29:02,471 - GoogleMapsScraper - INFO - Added agency: Bank of Africa in Casablanca
+2025-03-11 17:29:07,081 - GoogleMapsScraper - INFO - Added agency: Bank of Africa Siège Social in Casablanca
+2025-03-11 17:29:11,751 - GoogleMapsScraper - INFO - Added agency: Bank of Africa in Casablanca
+2025-03-11 17:29:16,348 - GoogleMapsScraper - INFO - Added agency: Bank of Africa in Casablanca
+2025-03-11 17:29:21,042 - GoogleMapsScraper - INFO - Added agency: Bank of Africa in Casablanca
+2025-03-11 17:29:25,780 - GoogleMapsScraper - INFO - Added agency: Bank of Africa in Casablanca
+2025-03-11 17:29:27,824 - GoogleMapsScraper - INFO -   Found 9 agencies in Casablanca

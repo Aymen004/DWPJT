@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Raw data from PostgreSQL staging tables"
+    database: "{{ env_var('DBT_DATABASE', 'postgres') }}"
+    schema: "{{ env_var('DBT_SCHEMA', 'public') }}"
+    tables:
+      - name: staging_reviews
+        description: "Raw reviews data from Google Maps scraper"
+        columns:
+          - name: id
+            description: "Primary key"
+          - name: bank_name
+            description: "Name of the bank"
+          - name: agency_name
+            description: "Name of the agency/branch"
+          - name: location
+            description: "Location string from Google Maps"
+          - name: review_text
+            description: "Text content of the review"
+          - name: rating
+            description: "Rating given by the reviewer (1-5)"
+          - name: review_date
+            description: "Date when the review was submitted"
+          - name: language
+            description: "Detected language of the review"
