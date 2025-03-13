@@ -144,6 +144,12 @@ class GoogleMapsReviewsScraper:
                 try:
                     # We need to find elements again as the DOM might have changed
                     agency_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.Nv2PK")
+                    
+                    # Check if we have enough elements before accessing index
+                    if i >= len(agency_elements):
+                        logger.warning(f"Not enough agency elements ({len(agency_elements)}) to access index {i}")
+                        break
+                        
                     element = agency_elements[i]
                     
                     # Extract basic information
@@ -153,19 +159,7 @@ class GoogleMapsReviewsScraper:
                     # Check if this is actually a bank agency (filter out irrelevant results)
                     if not any(bank.lower() in name.lower() for bank in [bank_name.lower(), "bank", "banque", "atm", "agence"]):
                         continue
-                        
-                    # Get location
-                    try:
-                        # Try extracting location from the new element structure
-                        location = element.find_element(By.CSS_SELECTOR, "div.AeaXub .Io6YTe").text.strip()
-                    except NoSuchElementException:
-                        try:
-                            location = element.find_element(By.CSS_SELECTOR, "div.W4Efsd > div:nth-child(1) > span:nth-child(1)").text.strip()
-                        except NoSuchElementException:
-                            try:
-                                location = element.find_element(By.CSS_SELECTOR, "div.W4Efsd div[jsan]").text.strip()
-                            except NoSuchElementException:
-                                location = f"{city}, Morocco"
+                
                     
                     # Get rating if available
                     try:
@@ -177,7 +171,6 @@ class GoogleMapsReviewsScraper:
                     # Create agency object
                     agency = {
                         "name": name,
-                        "location": location,
                         "city": city,
                         "bank": bank_name,
                         "rating": rating
@@ -224,7 +217,7 @@ class GoogleMapsReviewsScraper:
             logger.error(f"Error searching for {bank_name} agencies in {city}: {e}")
             return []
     
-    def get_reviews(self, agency, max_reviews=20):
+    def get_reviews(self, agency,):
         """Get all non-empty reviews for a specific agency by clicking 'more reviews' / 'plus d'avis'."""
         logger.info(f"Getting reviews for {agency['name']} in {agency['city']}")
         reviews = []
@@ -336,7 +329,6 @@ class GoogleMapsReviewsScraper:
                     reviews.append({
                         "agency_name": agency["name"],
                         "bank": agency["bank"],
-                        "location": agency["location"],
                         "city": agency["city"],
                         "reviewer": reviewer,
                         "text": review_text,
@@ -381,8 +373,7 @@ def main():
     parser.add_argument('--cities', type=str, default='Casablanca,Rabat,Marrakech,Tangier,Fes', 
                        help='Comma-separated list of Moroccan cities (default: Casablanca,Rabat,Marrakech,Tangier,Fes)')
     parser.add_argument('--headless', action='store_true', help='Run browser in headless mode')
-    parser.add_argument('--max_reviews', type=int, default=35, help='Maximum number of reviews to collect per agency')
-    
+
     args = parser.parse_args()
     
     # Initialize the scraper
@@ -409,7 +400,7 @@ def main():
                     logger.info(f"    Processing agency {i+1}/{len(agencies)}: {agency['name']}")
                     print(f"    Processing agency {i+1}/{len(agencies)}: {agency['name']}")
                     
-                    reviews = scraper.get_reviews(agency, max_reviews=args.max_reviews)
+                    reviews = scraper.get_reviews(agency)
                     all_reviews.extend(reviews)
                     
                     logger.info(f"    Collected {len(reviews)} reviews for {agency['name']}")
