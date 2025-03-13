@@ -137,10 +137,8 @@ class GoogleMapsReviewsScraper:
                         last_count = len(new_elements)
                     total_agencies = last_count
             logger.info(f"Found {total_agencies} agencies for {bank_name} in {city}")
-            # Remove any agency limit; process all loaded agencies
-            max_agencies = total_agencies
             
-            for i in range(max_agencies):
+            for i in range(total_agencies):
                 try:
                     # We need to find elements again as the DOM might have changed
                     agency_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.Nv2PK")
@@ -155,11 +153,7 @@ class GoogleMapsReviewsScraper:
                     # Extract basic information
                     name_element = element.find_element(By.CSS_SELECTOR, "div.qBF1Pd")
                     name = name_element.text.strip()
-                    
-                    # Check if this is actually a bank agency (filter out irrelevant results)
-                    if not any(bank.lower() in name.lower() for bank in [bank_name.lower(), "bank", "banque", "atm", "agence"]):
-                        continue
-                
+
                     
                     # Get rating if available
                     try:
@@ -246,58 +240,25 @@ class GoogleMapsReviewsScraper:
             except Exception:
                 logger.info("No 'Plus d'avis' button found, proceeding")
             
-            # Replace lines 251-269 with this improved scrolling implementation
-            # Find the scrollable reviews container using multiple potential selectors
+            # Rapidly scroll the review container until no new reviews load
             scrollable = None
-            scroll_selectors = [
-                "div[role='feed']", 
-                "div.m6QErb", 
-                "div.m6QErb.DxyBCb.kA9KIf.dS8AEf", 
-                "div[aria-label*='review']"
-            ]
-            for sel in scroll_selectors:
+            for sel in ["div[role='feed']", "div.m6QErb"]:
                 try:
                     scrollable = self.driver.find_element(By.CSS_SELECTOR, sel)
-                    logger.info(f"Found reviews container using selector: {sel}")
                     break
-                except NoSuchElementException:
+                except:
                     continue
-
             if scrollable:
                 last_count = 0
-                consecutive_same_count = 0
-                max_consecutive_same = 2  # Stop after 2 scrolls with no new reviews
-                max_scroll_attempts = 5  # Safeguard against infinite loops
-                
-                logger.info("Starting to scroll through reviews...")
-                for scroll_attempt in range(max_scroll_attempts):
-                    try:
-                        # Scroll down in the reviews container
-                        self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", scrollable)
-                        
-                        # Dynamic wait: shorter at first, longer as we progress
-                        time.sleep(min(0.5 + (scroll_attempt * 0.05), 2.0))
-                        
-                        # Check for new reviews
-                        review_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.jftiEf")
-                        current_count = len(review_elements)
-                        
-                        if current_count > last_count:
-                            # Found new reviews
-                            logger.info(f"Scroll {scroll_attempt+1}: Reviews count increased from {last_count} to {current_count}")
-                            last_count = current_count
-                            consecutive_same_count = 0
-                        else:
-                            # No new reviews found
-                            consecutive_same_count += 1
-                            if consecutive_same_count >= max_consecutive_same:
-                                logger.info(f"No new reviews found after {max_consecutive_same} consecutive scrolls. Stopping.")
-                                break
-                    except Exception as e:
-                        logger.warning(f"Error during scrolling: {e}")
+                for _ in range(50):
+                    self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", scrollable)
+                    time.sleep(0.5)
+                    review_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.jftiEf")
+                    if len(review_elements) == last_count:
                         break
-            else:
-                logger.warning("Could not find reviews scrollable container")
+                    last_count = len(review_elements)
+            review_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.jftiEf")
+            logger.info(f"After scrolling: found {len(review_elements)} review elements")
 
             # Process all review elements and ignore empty reviews
             for i, elem in enumerate(review_elements):
