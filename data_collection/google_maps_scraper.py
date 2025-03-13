@@ -10,22 +10,20 @@ Usage:
 
 import argparse
 import json
-import os
 import time
 import re
 import random
 from datetime import datetime
 import pandas as pd
 import logging
-from langdetect import detect, LangDetectException
+from langdetect import detect
 
 # For web scraping
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait  # type: ignore
+from selenium.webdriver.support import expected_conditions as EC  # type: ignore
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, ElementClickInterceptedException, StaleElementReferenceException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -96,10 +94,51 @@ class GoogleMapsReviewsScraper:
                 EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.Nv2PK"))
             )
             
-            logger.info(f"Found {len(agency_elements)} agencies for {bank_name} in {city}")
-            
-            # Limit to max 10 agencies per city-bank combination to avoid exceeding limits
-            max_agencies = min(len(agency_elements), 10)
+            # --- New code: scroll down using new extended agencies container ---
+            try:
+                agencies_container = WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "div.m6QErb.DxyBCb.kA9KIf.dS8AEf.XiKgde.ecceSd"))
+                )
+                logger.info("Found extended agencies container (new feed); using it for scrolling")
+                last_count = len(agencies_container.find_elements(By.CSS_SELECTOR, "div.Nv2PK"))
+                for _ in range(30):
+                    self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", agencies_container)
+                    time.sleep(1)
+                    new_count = len(agencies_container.find_elements(By.CSS_SELECTOR, "div.Nv2PK"))
+                    if new_count == last_count:
+                        break
+                    last_count = new_count
+                total_agencies = last_count
+            except Exception:
+                logger.info("New extended agencies container not found; falling back to previous method")
+                try:
+                    scroll_box = WebDriverWait(self.driver, 10).until(
+                        EC.presence_of_element_located((By.CSS_SELECTOR, "div.section-listbox"))
+                    )
+                    logger.info("Found agencies container; using it for scrolling")
+                    last_count = len(self.driver.find_elements(By.CSS_SELECTOR, "div.Nv2PK"))
+                    for _ in range(20):
+                        scroll_box.send_keys(Keys.PAGE_DOWN)
+                        time.sleep(1)
+                        new_count = len(self.driver.find_elements(By.CSS_SELECTOR, "div.Nv2PK"))
+                        if new_count == last_count:
+                            break
+                        last_count = new_count
+                    total_agencies = last_count
+                except Exception:
+                    logger.info("Agencies container not found; falling back to window scroll")
+                    last_count = len(self.driver.find_elements(By.CSS_SELECTOR, "div.Nv2PK"))
+                    for _ in range(10):
+                        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+                        time.sleep(1)
+                        new_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.Nv2PK")
+                        if len(new_elements) == last_count:
+                            break
+                        last_count = len(new_elements)
+                    total_agencies = last_count
+            logger.info(f"Found {total_agencies} agencies for {bank_name} in {city}")
+            # Remove any agency limit; process all loaded agencies
+            max_agencies = total_agencies
             
             for i in range(max_agencies):
                 try:
@@ -117,12 +156,16 @@ class GoogleMapsReviewsScraper:
                         
                     # Get location
                     try:
-                        location = element.find_element(By.CSS_SELECTOR, "div.W4Efsd > div:nth-child(1) > span:nth-child(1)").text.strip()
+                        # Try extracting location from the new element structure
+                        location = element.find_element(By.CSS_SELECTOR, "div.AeaXub .Io6YTe").text.strip()
                     except NoSuchElementException:
                         try:
-                            location = element.find_element(By.CSS_SELECTOR, "div.W4Efsd div[jsan]").text.strip()
+                            location = element.find_element(By.CSS_SELECTOR, "div.W4Efsd > div:nth-child(1) > span:nth-child(1)").text.strip()
                         except NoSuchElementException:
-                            location = f"{city}, Morocco"
+                            try:
+                                location = element.find_element(By.CSS_SELECTOR, "div.W4Efsd div[jsan]").text.strip()
+                            except NoSuchElementException:
+                                location = f"{city}, Morocco"
                     
                     # Get rating if available
                     try:
@@ -182,326 +225,131 @@ class GoogleMapsReviewsScraper:
             return []
     
     def get_reviews(self, agency, max_reviews=20):
-        """Get reviews for a specific agency."""
+        """Get all non-empty reviews for a specific agency by clicking 'more reviews' / 'plus d'avis'."""
         logger.info(f"Getting reviews for {agency['name']} in {agency['city']}")
-        
         reviews = []
         try:
-            # Navigate to the agency page
             self.driver.get(agency["url"])
-            time.sleep(5)  # Increased wait time for page to load
-            
-            # Check if we need to accept cookies
+            WebDriverWait(self.driver, 10).until(lambda d: "maps/place" in d.current_url)
             try:
-                cookie_buttons = self.driver.find_elements(By.XPATH, 
-                    "//button[contains(@aria-label, 'Accept') or contains(text(), 'Accept') or contains(text(), 'Agree')]")
-                if cookie_buttons:
-                    cookie_buttons[0].click()
-                    time.sleep(1)
-                    logger.info("Accepted cookies dialog")
-            except Exception as e:
-                logger.info(f"No cookie dialog or couldn't handle it: {e}")
-            
-            # Look for reviews section - try multiple methods as Google Maps changes frequently
-            logger.info("Looking for reviews section")
-            found_reviews_section = False
-            
-            # Method 1: Look for review count button
+                WebDriverWait(self.driver, 5).until(
+                    EC.element_to_be_clickable((By.XPATH, "//button[contains(@aria-label, 'Accept')]"))
+                ).click()
+            except Exception:
+                pass
+            # Open reviews column – look for a review button or one with "plus d'avis" text
             try:
-                review_elements = self.driver.find_elements(By.XPATH, 
-                    "//button[contains(@aria-label, 'review') or contains(@aria-label, 'avis') or contains(@aria-label, '★')]")
-                
-                if review_elements:
-                    logger.info(f"Found review button (Method 1): {review_elements[0].get_attribute('aria-label')}")
-                    review_elements[0].click()
-                    time.sleep(3)
-                    found_reviews_section = True
-            except Exception as e:
-                logger.warning(f"Method 1 failed: {e}")
-            
-            # Method 2: Try finding the reviews tab - recent Google Maps versions
-            if not found_reviews_section:
+                review_btn = WebDriverWait(self.driver, 5).until(
+                    EC.element_to_be_clickable((By.XPATH, "//button[contains(@aria-label, 'review') or contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'plus d'avis') or contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'more reviews')]"))
+                )
+                review_btn.click()
+            except Exception:
+                logger.warning("Review button not found; proceeding anyway")
+            WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "div.jftiEf"))
+            )
+            # NEW: Click repeatedly on the "Plus d'avis" button to load all reviews
+            while True:
                 try:
-                    tabs = self.driver.find_elements(By.CSS_SELECTOR, "button.hh2c6")
-                    for tab in tabs:
+                    more_btn = WebDriverWait(self.driver, 3).until(
+                        EC.element_to_be_clickable((By.XPATH, "//button[contains(@aria-label, \"Plus d'avis\")]"))
+                    )
+                    more_btn.click()
+                    logger.info("Clicked 'Plus d'avis' button to load additional reviews")
+                    time.sleep(1)  # brief pause after click
+                except Exception:
+                    logger.info("No 'Plus d'avis' button found, proceeding")
+                    break
+            # Continuously click "more reviews"/"plus d'avis" button if it exists
+            while True:
+                try:
+                    more_btn = WebDriverWait(self.driver, 3).until(
+                        EC.element_to_be_clickable((By.XPATH, "//button[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'more reviews') or contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'plus d'avis')]"))
+                    )
+                    more_btn.click()
+                    time.sleep(1)
+                    logger.info("Clicked 'more reviews' button to load additional reviews")
+                except Exception:
+                    logger.info("No more 'more reviews' button found")
+                    break
+            # Rapidly scroll the review container until no new reviews load
+            scrollable = None
+            for sel in ["div[role='feed']", "div.m6QErb"]:
+                try:
+                    scrollable = self.driver.find_element(By.CSS_SELECTOR, sel)
+                    break
+                except:
+                    continue
+            if scrollable:
+                last_count = 0
+                for _ in range(30):
+                    self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", scrollable)
+                    time.sleep(0.5)
+                    review_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.jftiEf")
+                    if len(review_elements) == last_count:
+                        break
+                    last_count = len(review_elements)
+            review_elements = self.driver.find_elements(By.CSS_SELECTOR, "div.jftiEf")
+            logger.info(f"After scrolling: found {len(review_elements)} review elements")
+            # Process all review elements and ignore empty reviews
+            for i, elem in enumerate(review_elements):
+                try:
+                    reviewer = "Anonymous"
+                    try:
+                        names = elem.find_elements(By.CSS_SELECTOR, "div.d4r55, .WNxzHc")
+                        if names:
+                            reviewer = names[0].text.split("\n")[0].strip()
+                    except:
+                        pass
+                    rating = None
+                    try:
+                        rating_span = elem.find_element(By.CSS_SELECTOR, "span.kvMYJc")
+                        rating_aria = rating_span.get_attribute("aria-label")
+                        match = re.search(r'([\d,.]+)', rating_aria)
+                        if match:
+                            num_str = match.group(1).replace(',', '.')
+                            rating = int(float(num_str))
+                        else:
+                            rating = 0
+                    except Exception:
                         try:
-                            if "review" in tab.text.lower() or "avis" in tab.text.lower():
-                                logger.info(f"Found reviews tab (Method 2): {tab.text}")
-                                tab.click()
-                                time.sleep(3)
-                                found_reviews_section = True
+                            rating = len(elem.find_elements(By.CSS_SELECTOR, "img[src*='star_active']"))
+                        except:
+                            rating = 0
+                    review_text = ""
+                    for sel in ["span.wiI7pd", "span.review-full-text", "div.MyEned"]:
+                        try:
+                            txt_elems = elem.find_elements(By.CSS_SELECTOR, sel)
+                            if txt_elems and txt_elems[0].text.strip():
+                                review_text = txt_elems[0].text.strip()
                                 break
                         except:
                             continue
-                except Exception as e:
-                    logger.warning(f"Method 2 failed: {e}")
-            
-            # Method 3: Try clicking on ratings section
-            if not found_reviews_section:
-                try:
-                    rating_sections = self.driver.find_elements(By.XPATH, 
-                        "//div[contains(@aria-label, 'star') or contains(@aria-label, 'étoile')]")
-                    if rating_sections:
-                        for section in rating_sections:
-                            if section.is_displayed() and section.is_enabled():
-                                logger.info("Found ratings section (Method 3)")
-                                self.driver.execute_script("arguments[0].click();", section)
-                                time.sleep(3)
-                                found_reviews_section = True
-                                break
-                except Exception as e:
-                    logger.warning(f"Method 3 failed: {e}")
-            
-            # Method 4: Try to find by specific section structure
-            if not found_reviews_section:
-                try:
-                    sections = self.driver.find_elements(By.CSS_SELECTOR, "div.m6QErb.DxyBCb.kA9KIf.dS8AEf")
-                    if sections and len(sections) >= 2:
-                        logger.info("Found reviews section by structure (Method 4)")
-                        self.driver.execute_script("arguments[0].scrollIntoView();", sections[1])
-                        time.sleep(1)
-                        found_reviews_section = True
-                except Exception as e:
-                    logger.warning(f"Method 4 failed: {e}")
-            
-            if not found_reviews_section:
-                logger.warning("Could not find reviews section using any method")
-                # Take screenshot for debugging
-                try:
-                    screenshot_path = f"debug_screenshot_{agency['name'].replace(' ', '_')}.png"
-                    self.driver.save_screenshot(screenshot_path)
-                    logger.info(f"Saved debug screenshot to {screenshot_path}")
-                except:
-                    pass
-                return []
-            
-            # Wait for reviews to load - try different possible selectors
-            review_containers = []
-            selectors_to_try = [
-                "div.jftiEf", 
-                "div.gws-localreviews__google-review", 
-                "div[data-review-id]",
-                "div.jJc9Ad",
-                "div[class*='review']"
-            ]
-            
-            for selector in selectors_to_try:
-                try:
-                    logger.info(f"Trying to find reviews with selector: {selector}")
-                    review_containers = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                    if review_containers:
-                        logger.info(f"Found {len(review_containers)} review containers with selector: {selector}")
-                        break
-                except Exception as e:
-                    logger.warning(f"Selector {selector} failed: {e}")
-            
-            if not review_containers:
-                logger.warning("Could not find any review elements")
-                return []
-            
-            # Try to identify scrollable container
-            scrollable_containers = []
-            scroll_selectors = [
-                "div[role='feed']",
-                "div.m6QErb",
-                "div.m6QErb.DxyBCb.kA9KIf.dS8AEf",
-                "div.DxyBCb.kA9KIf.dS8AEf",
-                "div.lXJj5c.Hk4XGb"
-            ]
-            
-            for selector in scroll_selectors:
-                try:
-                    containers = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                    for container in containers:
-                        if container.is_displayed():
-                            scrollable_containers.append(container)
-                except:
-                    pass
-            
-            # Scroll multiple times to load more reviews
-            if scrollable_containers:
-                scrollable_div = scrollable_containers[0]
-                logger.info("Scrolling to load more reviews")
-                
-                for i in range(min(15, max(1, max_reviews // 3))):
-                    try:
-                        self.driver.execute_script('arguments[0].scrollTop = arguments[0].scrollHeight', scrollable_div)
-                        time.sleep(0.5)
-                        
-                        # Try to expand any collapsed reviews
-                        try:
-                            more_buttons = self.driver.find_elements(By.CSS_SELECTOR, "button.w8nwRe")
-                            for btn in more_buttons[:5]:  # Limit to first few to avoid spending too much time
-                                if btn.is_displayed():
-                                    self.driver.execute_script("arguments[0].click();", btn)
-                                    time.sleep(0.2)
-                        except:
-                            pass
-                    except Exception as e:
-                        logger.warning(f"Error during scrolling iteration {i}: {e}")
-            else:
-                logger.warning("Could not find scrollable container")
-            
-            # Re-fetch review elements after scrolling
-            for selector in selectors_to_try:
-                try:
-                    review_containers = self.driver.find_elements(By.CSS_SELECTOR, selector)
-                    if review_containers:
-                        logger.info(f"After scrolling: found {len(review_containers)} review elements with selector: {selector}")
-                        break
-                except:
-                    pass
-            
-            # Process each review
-            for i, review_element in enumerate(review_containers[:max_reviews]):
-                try:
-                    # Get reviewer name (useful for debugging)
-                    reviewer = "Anonymous"
-                    try:
-                        name_elements = review_element.find_elements(By.CSS_SELECTOR, "div.d4r55, .WNxzHc")
-                        if name_elements:
-                            reviewer = name_elements[0].text.strip()
-                    except:
-                        pass
-                    
-                    # Get rating
-                    rating = None
-                    try:
-                        # Try multiple methods to extract rating
-                        rating_methods = [
-                            # Method 1: From aria-label
-                            lambda: int(re.search(r'(\d+)', 
-                                review_element.find_element(By.CSS_SELECTOR, "span[aria-label*='star' i]").get_attribute("aria-label")).group(1)),
-                            
-                            # Method 2: Count filled stars
-                            lambda: len(review_element.find_elements(By.CSS_SELECTOR, "img[src*='star_active'], span.vzX5Ic")),
-                            
-                            # Method 3: From specific rating element
-                            lambda: int(float(review_element.find_element(By.CSS_SELECTOR, "span.kvMYJc").get_attribute("aria-label").split()[0])),
-                        ]
-                        
-                        for method in rating_methods:
-                            try:
-                                rating = method()
-                                if rating and 1 <= rating <= 5:
-                                    break
-                            except:
-                                continue
-                    except:
-                        pass
-                    
-                    # Get review text
-                    review_text = ""
-                    try:
-                        # Try different possible text containers
-                        text_selectors = [
-                            "span.wiI7pd",
-                            "span.review-full-text",
-                            "div.MyEned",
-                            "div.review-content"
-                        ]
-                        
-                        for selector in text_selectors:
-                            try:
-                                elements = review_element.find_elements(By.CSS_SELECTOR, selector)
-                                if elements:
-                                    review_text = elements[0].text.strip()
-                                    if review_text:
-                                        break
-                            except:
-                                continue
-                        
-                        # If still no text, try to expand review first
-                        if not review_text:
-                            try:
-                                more_buttons = review_element.find_elements(By.CSS_SELECTOR, "button.w8nwRe, button[aria-label*='More'], button[jsaction*='pane.review']")
-                                for btn in more_buttons:
-                                    if btn.is_displayed():
-                                        self.driver.execute_script("arguments[0].click();", btn)
-                                        time.sleep(0.5)
-                                        
-                                        # Try again to get text after expanding
-                                        for selector in text_selectors:
-                                            try:
-                                                elements = review_element.find_elements(By.CSS_SELECTOR, selector)
-                                                if elements:
-                                                    review_text = elements[0].text.strip()
-                                                    if review_text:
-                                                        break
-                                            except:
-                                                continue
-                            except:
-                                pass
-                    except:
-                        pass
-                    
-                    # Get review date
+                    if not review_text:
+                        continue  # skip empty reviews
                     review_date = datetime.now().strftime("%Y-%m-%d")
+                    language = "unknown"
                     try:
-                        date_selectors = ["span.rsqaWe", "span.review-date", "span[class*='date']"]
-                        
-                        for selector in date_selectors:
-                            try:
-                                date_elements = review_element.find_elements(By.CSS_SELECTOR, selector)
-                                if date_elements:
-                                    date_text = date_elements[0].text.strip()
-                                    if date_text:
-                                        # Convert relative date to actual date
-                                        current_date = datetime.now()
-                                        if "week" in date_text.lower() or "semaine" in date_text.lower():
-                                            weeks = int(re.search(r'(\d+)', date_text).group(1))
-                                            review_date = (current_date - pd.Timedelta(weeks=weeks)).strftime("%Y-%m-%d")
-                                        elif "month" in date_text.lower() or "mois" in date_text.lower():
-                                            months = int(re.search(r'(\d+)', date_text).group(1))
-                                            review_date = (current_date - pd.Timedelta(days=months*30)).strftime("%Y-%m-%d")
-                                        elif "year" in date_text.lower() or "an" in date_text.lower():
-                                            years = int(re.search(r'(\d+)', date_text).group(1))
-                                            review_date = (current_date - pd.Timedelta(days=years*365)).strftime("%Y-%m-%d")
-                                        elif "day" in date_text.lower() or "jour" in date_text.lower() or "today" in date_text.lower():
-                                            if "today" in date_text.lower():
-                                                days = 0
-                                            else:
-                                                days = int(re.search(r'(\d+)', date_text).group(1))
-                                            review_date = (current_date - pd.Timedelta(days=days)).strftime("%Y-%m-%d")
-                                        break
-                            except:
-                                continue
+                        language = detect(review_text)
                     except:
                         pass
-                    
-                    # Detect language if review text exists
-                    language = "unknown"
-                    if review_text:
-                        try:
-                            language = detect(review_text)
-                        except LangDetectException:
-                            pass
-                    
-                    # Only add reviews with actual content
-                    if review_text or rating:
-                        # Create review object
-                        review = {
-                            "agency_name": agency["name"],
-                            "bank": agency["bank"],
-                            "location": agency["location"],
-                            "city": agency["city"],
-                            "reviewer": reviewer,
-                            "text": review_text,
-                            "rating": rating,
-                            "date": review_date,
-                            "language": language,
-                            "url": agency["url"]
-                        }
-                        
-                        reviews.append(review)
-                        logger.info(f"Added review {i+1} for {agency['name']}: '{review_text[:30]}{'...' if len(review_text) > 30 else ''}' (rating: {rating})")
-                    
+                    reviews.append({
+                        "agency_name": agency["name"],
+                        "bank": agency["bank"],
+                        "location": agency["location"],
+                        "city": agency["city"],
+                        "reviewer": reviewer,
+                        "text": review_text,
+                        "rating": rating,
+                        "date": review_date,
+                        "language": language,
+                        "url": agency["url"]
+                    })
+                    logger.info(f"Added review {i+1} for {agency['name']} (rating: {rating})")
                 except Exception as e:
                     logger.error(f"Error extracting review {i+1} for {agency['name']}: {e}")
-            
             logger.info(f"Collected {len(reviews)} reviews for {agency['name']}")
             return reviews
-            
         except Exception as e:
             logger.error(f"Error getting reviews for {agency['name']}: {e}")
             return []
@@ -533,7 +381,7 @@ def main():
     parser.add_argument('--cities', type=str, default='Casablanca,Rabat,Marrakech,Tangier,Fes', 
                        help='Comma-separated list of Moroccan cities (default: Casablanca,Rabat,Marrakech,Tangier,Fes)')
     parser.add_argument('--headless', action='store_true', help='Run browser in headless mode')
-    parser.add_argument('--max_reviews', type=int, default=20, help='Maximum number of reviews to collect per agency')
+    parser.add_argument('--max_reviews', type=int, default=35, help='Maximum number of reviews to collect per agency')
     
     args = parser.parse_args()
     
